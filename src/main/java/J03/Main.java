@@ -24,7 +24,7 @@ public class Main {
 
     public static void printRandomDouble(MySupplier<Double> supplier, int count) {
         for (int i = 0; i < count; ++i) {
-            System.out.println(supplier.get());
+            System.out.println(supplier.eat());
         }
     }
 }
