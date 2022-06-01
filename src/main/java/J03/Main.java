@@ -19,6 +19,12 @@ public class Main {
         System.out.println(helloSupplier.get());
 
         Supplier<Double> randomDoubleGenerator = () -> Math.random();
-        System.out.println(randomDoubleGenerator.get());
+        printRandomDouble(randomDoubleGenerator, 5);
+    }
+
+    public static void printRandomDouble(Supplier<Double> supplier, int count) {
+        for (int i = 0; i < count; ++i) {
+            System.out.println(supplier.get());
+        }
     }
 }
