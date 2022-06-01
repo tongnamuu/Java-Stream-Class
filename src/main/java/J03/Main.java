@@ -18,11 +18,11 @@ public class Main {
         assert (helloSupplier.get().equals("Hello Supplier"));
         System.out.println(helloSupplier.get());
 
-        Supplier<Double> randomDoubleGenerator = () -> Math.random();
+        MySupplier<Double> randomDoubleGenerator = () -> Math.random();
         printRandomDouble(randomDoubleGenerator, 5);
     }
 
-    public static void printRandomDouble(Supplier<Double> supplier, int count) {
+    public static void printRandomDouble(MySupplier<Double> supplier, int count) {
         for (int i = 0; i < count; ++i) {
             System.out.println(supplier.get());
         }
